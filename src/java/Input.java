@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-class HelloInput {
-	public static void main(String args[]) {
-		
+class Input {
+    public static void main(String args[]) {
+
 		// initialize scanner using an extremely
 		// simply way of creating an object from
 		// a class by already decalring a variable
@@ -15,6 +15,6 @@ class HelloInput {
 
 		// print out the string we just received
 		System.out.println("Nice to meet you, " + name);
-
-	}
+        
+    }
 }

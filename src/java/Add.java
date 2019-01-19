@@ -25,6 +25,11 @@ class Add {
         // really, extremely off.
         Add a = new Add();
         System.out.println(a.add(num1, num2));
+
+        // update - I figured you've to add 
+        // a `static` specifier to an internal
+        // methods inside a class for it to be
+        // called inside its own
     }
     
 }
