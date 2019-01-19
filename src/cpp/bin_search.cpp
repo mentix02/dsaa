@@ -33,7 +33,7 @@ int main() {
     cout << "\nBefore sorting : ";
     print_arr(arr, size);
 
-    sort(arr, arr+size);
+    sort(arr, arr+size); // just glad the std::sort() works with dynamic arrays
 
     cout << "After sorting  : ";
     print_arr(arr, size);
