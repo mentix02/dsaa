@@ -10,14 +10,16 @@ parser.add_argument('--java', action='store_const', help='flag specifier indicat
 
 args = parser.parse_args()
 
+working_source_string = 'working with {} source'
+
 if args.cpp:
-    print('working with c++ files')
+    print(working_source_string.format('cpp'))
     files = os.listdir('src/cpp/')
 elif args.java:
-    print('working with java files')
+    print(working_source_string.format('java'))
     files = os.listdir('src/java/')
 else:
-    print('working with c files')
+    print(working_source_string.format('c'))
     files = os.listdir('src/c/')
 
 

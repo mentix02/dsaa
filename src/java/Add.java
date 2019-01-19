@@ -6,6 +6,11 @@ class Add {
 
     public static void main(String args[]) {
 
+        if (args.length != 2) {
+            System.out.println("usage: java Add <num> <num>");
+            System.exit(1);
+        }
+
         // initialize numbers
         int num1, num2;
         num1 = Integer.parseInt(args[0]);
