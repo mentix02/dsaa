@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import time
 import argparse
 
 
@@ -27,6 +28,7 @@ def remove_extension(path):
     return path[:path.rfind('.')]
 
 
+t1 = time.time()
 for file in files:
     if args.cpp:
         os.system('g++ -Wall -o bin/cpp/{} -g src/cpp/{}'.format(remove_extension(file), file))
@@ -36,5 +38,6 @@ for file in files:
         break
     else:
         os.system('gcc -Wall -o bin/c/{} -g src/c/{} -lm'.format(remove_extension(file), file))
+t2 = time.time()
 
-print('compiled {} files'.format(len(files)))
+print('compiled {} files in {} seconds'.format(len(files), t2-t1))
