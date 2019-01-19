@@ -2,46 +2,46 @@
 #include <stdlib.h>
 
 struct Node {
-	int data;
-	struct Node *next;
+    int data;
+    struct Node *next;
 };
 
 void printList(struct Node *n) {
-	while (n != NULL) {
-		if (n->next == NULL) {
-			printf("   |-----------|\n");
-			printf("   | %d | %p |\n", n->data, n->next);
-			printf("   |-----------|\n");
-			break;
-		}
-		printf("|--------------------|\n");
-		printf("| %d | %p |\n", n->data, n->next);
-		printf("|--------------------|\n");
-		printf("\t|\n");
-		printf("\tv\n");
-		n = n -> next;
-	}
+    while (n != NULL) {
+        if (n->next == NULL) {
+            printf("   |-----------|\n");
+            printf("   | %d | %p |\n", n->data, n->next);
+            printf("   |-----------|\n");
+            break;
+        }
+        printf("|--------------------|\n");
+        printf("| %d | %p |\n", n->data, n->next);
+        printf("|--------------------|\n");
+        printf("\t|\n");
+        printf("\tv\n");
+        n = n -> next;
+    }
 }
 
 int main() {
-	struct Node* head = NULL;
-	struct Node* second = NULL;
-	struct Node* third = NULL;
+    struct Node* head = NULL;
+    struct Node* second = NULL;
+    struct Node* third = NULL;
 
-	head = (struct Node*) malloc(sizeof(struct Node));
-	second = (struct Node*) malloc(sizeof(struct Node));
-	third = (struct Node*) malloc(sizeof(struct Node));
+    head = (struct Node*) malloc(sizeof(struct Node));
+    second = (struct Node*) malloc(sizeof(struct Node));
+    third = (struct Node*) malloc(sizeof(struct Node));
 
-	head->data = 1;
-	head->next = second;
+    head->data = 1;
+    head->next = second;
 
-	second->data = 2;
-	second->next = third;
+    second->data = 2;
+    second->next = third;
 
-	third->data = 3;
-	third->next = NULL;
+    third->data = 3;
+    third->next = NULL;
 
-	printList(head);
+    printList(head);
 
-	return 0;
+    return 0;
 }
