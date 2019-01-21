@@ -6,8 +6,10 @@ import argparse
 
 parser = argparse.ArgumentParser(description='python script to compile source code from different directories')
 
-parser.add_argument('--cpp', action='store_const', help='flag specifier indicating c++ source code', const=True, default=False)
-parser.add_argument('--java', action='store_const', help='flag specifier indicating java source code', const=True, default=False)
+parser.add_argument('--cpp', action='store_const', help='flag specifier \
+                    indicating c++ source code', const=True, default=False)
+parser.add_argument('--java', action='store_const', help='flag specifier \
+                    indicating java source code', const=True, default=False)
 
 args = parser.parse_args()
 
