@@ -32,6 +32,8 @@ def remove_extension(path):
 
 t1 = time.time()
 for file in files:
+    if file[:6] == "incom_":
+        continue
     if args.cpp:
         os.system('g++ -Wall -o bin/cpp/{} -g src/cpp/{}'.format(remove_extension(file), file))
     elif args.java:
