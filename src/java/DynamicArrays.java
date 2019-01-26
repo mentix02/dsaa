@@ -24,10 +24,20 @@ class DynamicArrays {
 		int[] nums = new int[num];
 
 		for (int i = 0; i < num; i++) {
-			
+			System.out.printf("Enter element number %d : ", i+1);
+			nums[i] = s.nextInt();
 		}
 
-	}
+		System.out.print("[ ");
 
+		for (int i = 0; i < num; i++) {
+
+			System.out.print(nums[i]);
+			System.out.print(" ");
+
+		}
+
+		System.out.println("]");
+	}
     
 }
